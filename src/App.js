@@ -11,6 +11,8 @@ import React from "react";
 import SpecialOrdersPage from "./Pages/SpecialOrdersPage";
 import Footer from "./Components/footer";
 import Success from "./Pages/Success";
+import Checkout from "./Services/callCheckout";
+import Confirmation from "./Pages/Confirmation";
 function App() {
   return (
 
@@ -23,6 +25,8 @@ function App() {
                   <Route path='Store' element={<Store />} />
                     <Route path='SpecialOrdersPage' element={<SpecialOrdersPage />} />
                     <Route path='Success' element={<Success />} />
+                  <Route path='Checkout' element={<Checkout />} />
+                  <Route path='Confirmation' element={<Confirmation />} />
                   <Route path='ItemPage' element={<ItemPage />} />
                 </Routes>
               </BrowserRouter>
