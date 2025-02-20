@@ -4,7 +4,9 @@ import { CartContext } from '../CartContext';
 import CartProduct from "../Pages/ShoppingCart";
 import {BagHeart} from 'react-bootstrap-icons';
 import callCheckout from "../Services/callCheckout";
+
 function NavbarComponent(){
+
     const cart = useContext(CartContext);
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
@@ -23,15 +25,14 @@ function NavbarComponent(){
                     <Navbar.Brand href='/'
                                   style={{fontSize: 50, fontWeight: "lighter", color: "rgb(255, 135, 158)"}}> Sweet</Navbar.Brand>
                     <Navbar.Toggle/>
-                    <Navbar.Collapse className="justify-content-end">
+                    <Navbar.Collapse className="justify-content-end" style={{backgroundColor: "rgb(255, 243, 219)"}}>
                         <Nav className="mr-auto">
                             <Nav.Link href="/"
                                       style={{fontSize: 25, fontWeight: "lighter", color: "rgb(208, 70, 98)"}}>Home</Nav.Link>
                             <Nav.Link href="/Store"
                                       style={{fontSize: 25, fontWeight: "lighter", color: "rgb(208, 70, 98)"}}>Shop</Nav.Link>
                             <Nav.Link href="/SpecialOrdersPage"
-                                      style={{fontSize: 25, fontWeight: "lighter", color: "rgb(208, 70, 98)"}}>Special
-                                Orders</Nav.Link>
+                                      style={{fontSize: 25, fontWeight: "lighter", color: "rgb(208, 70, 98)"}}>Special Orders</Nav.Link>
                         </Nav>
                         <Button onClick={handleShow}
                                 style={{backgroundColor: "rgb(243, 204, 76)", borderColor: "rgb(243, 204, 76)"}}><BagHeart color="rgb(188, 26, 85)"></BagHeart> {productsCount}
